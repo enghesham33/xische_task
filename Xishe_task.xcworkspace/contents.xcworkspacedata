@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Features/Details-Screen/Details-Screen.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Features/Listing-Screen/Listing-Screen.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "container:Xishe_task.xcodeproj">
+   </FileRef>
+</Workspace>
