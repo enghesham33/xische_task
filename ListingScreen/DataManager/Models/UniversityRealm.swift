@@ -2,12 +2,12 @@
 //  UniversityRealm.swift
 //  ListingScreen
 //
-//  Created by Mayar Khaled on 04/06/2024.
+//  Created by Hesham Khaled on 04/06/2024.
 //
 
 import RealmSwift
 
-class UniversityRealm: Object {
+public class UniversityRealm: Object {
     @Persisted(primaryKey: true) var id: ObjectId = ObjectId.generate()
     @Persisted var alphaTwoCode: String = ""
     @Persisted var domains: String = "" // separated by commas

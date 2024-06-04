@@ -2,7 +2,7 @@
 //  UniversityCell.swift
 //  ListingScreen
 //
-//  Created by Mayar Khaled on 03/06/2024.
+//  Created by Hesham Khaled on 03/06/2024.
 //
 
 import UIKit

@@ -7,12 +7,21 @@
 
 import Foundation
 
-struct University: Codable {
-    let alphaTwoCode: String?
-    let domains: [String]?
-    let name: String?
-    let webPages: [String]?
-    let country, stateProvince: String?
+public struct University: Codable {
+    public let alphaTwoCode: String?
+    public let domains: [String]?
+    public let name: String?
+    public let webPages: [String]?
+    public let country, stateProvince: String?
+    
+    public init(alphaTwoCode: String?, domains: [String]?, name: String?, webPages: [String]?, country: String?, stateProvince: String?) {
+        self.alphaTwoCode = alphaTwoCode
+        self.domains = domains
+        self.name = name
+        self.webPages = webPages
+        self.country = country
+        self.stateProvince = stateProvince
+    }
 
     enum CodingKeys: String, CodingKey {
         case alphaTwoCode = "alpha_two_code"

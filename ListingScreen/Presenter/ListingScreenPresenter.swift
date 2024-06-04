@@ -14,7 +14,11 @@ public class ListingScreenPresenter: ListingScreenPresenterProtocol {
     var router: ListingScreenRouterProtocol?
     var universities: [University]?
     
-    func viewLoaded() {
+    func viewWillAppear() {
+        if (universities?.count ?? 0) > 0 {
+            universities?.removeAll()
+            view?.reloadData()
+        }
         interactor?.getUniversities()
     }
     

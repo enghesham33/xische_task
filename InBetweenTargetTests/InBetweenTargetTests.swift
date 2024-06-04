@@ -1,14 +1,14 @@
 //
-//  XischeTaskTests.swift
-//  XischeTaskTests
+//  InBetweenTargetTests.swift
+//  InBetweenTargetTests
 //
-//  Created by Hesham Khaled on 04/06/2024.
+//  Created by Mayar Khaled on 04/06/2024.
 //
 
 import XCTest
-@testable import XischeTask
+@testable import InBetweenTarget
 
-final class XischeTaskTests: XCTestCase {
+final class InBetweenTargetTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

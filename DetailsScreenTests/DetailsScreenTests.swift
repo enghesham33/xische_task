@@ -1,14 +1,14 @@
 //
-//  XischeTaskTests.swift
-//  XischeTaskTests
+//  DetailsScreenTests.swift
+//  DetailsScreenTests
 //
 //  Created by Hesham Khaled on 04/06/2024.
 //
 
 import XCTest
-@testable import XischeTask
+@testable import DetailsScreen
 
-final class XischeTaskTests: XCTestCase {
+final class DetailsScreenTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

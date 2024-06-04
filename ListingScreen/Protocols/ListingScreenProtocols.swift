@@ -25,7 +25,7 @@ protocol ListingScreenPresenterProtocol: AnyObject {
     var router: ListingScreenRouterProtocol? { get set }
     
     var universities: [University]? { get set }
-    func viewLoaded()
+    func viewWillAppear()
     func swipeToRefresh()
     
     func numberOfItems() -> Int
@@ -56,7 +56,7 @@ protocol ListingScreenRouterProtocol: AnyObject {
     static func createListingScreenView() -> ListingScreenViewController
     
     var view: UIViewController? { get set }
-    
+    static var navigationHandler: ((University?, UINavigationController?) -> ())? {get set}
     func openDetailsScreen(university: University?)
 }
 

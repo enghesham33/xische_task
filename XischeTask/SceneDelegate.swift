@@ -2,11 +2,12 @@
 //  SceneDelegate.swift
 //  XischeTask
 //
-//  Created by Mayar Khaled on 04/06/2024.
+//  Created by Hesham Khaled on 04/06/2024.
 //
 
 import UIKit
 import ListingScreen
+import DetailsScreen
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -18,6 +19,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
+        ListingScreenRouter.navigationHandler = { university, navController in
+            let vc = DetailsScreenRouter.createDetailsScreenView(university: university)
+            navController?.pushViewController(vc, animated: true)
+        }
         let navController = UINavigationController(rootViewController: ListingScreenRouter.createListingScreenView())
         navController.setNavigationBarHidden(true, animated: false)
         

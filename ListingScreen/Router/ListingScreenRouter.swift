@@ -8,7 +8,10 @@
 import UIKit
 
 public class ListingScreenRouter: ListingScreenRouterProtocol {
+    public static var navigationHandler: ((University?, UINavigationController?) -> ())?
+    
     public static func createListingScreenView() -> ListingScreenViewController {
+                
         let view = ListingScreenViewController(nibName: "ListingScreenViewController", bundle: Bundle(for: ListingScreenViewController.self))
         
         let presenter: ListingScreenPresenterProtocol & ListingScreenInteractorOutputProtocol = ListingScreenPresenter()
@@ -36,6 +39,6 @@ public class ListingScreenRouter: ListingScreenRouterProtocol {
     weak var view: UIViewController?
     
     func openDetailsScreen(university: University?) {
-        
+        ListingScreenRouter.navigationHandler?(university, view?.navigationController)
     }
 }

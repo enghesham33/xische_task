@@ -32,7 +32,11 @@ public class ListingScreenViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         setupRefreshControl()
-        presenter?.viewLoaded()
+    }
+    
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter?.viewWillAppear()
     }
     
     private func setupRefreshControl() {
@@ -75,5 +79,9 @@ extension ListingScreenViewController: UITableViewDataSource, UITableViewDelegat
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "UniversityCell", for: indexPath) as? UniversityCell else {return UITableViewCell()}
         cell.university = presenter?.item(at: indexPath.row)
         return cell
+    }
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.userDidSelectItem(at: indexPath.row)
     }
 }
